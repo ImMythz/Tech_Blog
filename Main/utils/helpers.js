@@ -1,6 +1,6 @@
-// Formats the date in the template
+// Formats the date
 module.exports = {
     format_date: date => {
-        return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`
+        return date.toLocalString()
     }
 }

@@ -1,19 +1,18 @@
 const express = require('express')
 const session = require('express-session')
 const exphbs = require('express-handlebars')
-const routes = require('./controllers');
 const path = require('path')
 const helpers = require('./utils/helpers');
 
 
 // Sets up sessions storage to use Sequelize
-const sequelize = require('./config/connection');
+const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
     sercret: 'Super secret secret',
     cookie: {},
-    resave: False, 
+    resave: false, 
     saveUninitialized: true, 
     store: new SequelizeStore({
         db: sequelize
@@ -37,7 +36,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use(routes)
+app.use(require('./controllers/'))
 
 app.listen(PORT, () => {
     console.log(`App is listening on port ${PORT}`)
