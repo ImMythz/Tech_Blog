@@ -3,15 +3,18 @@ const signUpForm = async function(event){
     event.preventDefault()
     
     // Assigns user values from input fields
-    const usernameVal = $("#inputUsername")
-    const passwordVal = $("#inputPassword")
+    const usernameData = document.querySelector("#inputUsername")
+    const passwordData = document.querySelector("#inputPassword")
+
+    console.log(usernameData.value)
+    console.log(passwordData.value)
 
     // Creates a user
-    const response = await fetch('./api/user', {
+    const response = await fetch('/api/user', {
         method: 'POST',
         body: JSON.stringify({
-            username = usernameVal.value,
-            password = passwordVal.value
+            username: usernameData.value,
+            password: passwordData.value
         }),
         headers: { 'Content-Type': 'application/json' },
     })
@@ -24,6 +27,5 @@ const signUpForm = async function(event){
 }
 
 // Listens for user to hit submit to run logic above
-documnet
-    .querySelector('.signup-form')
-    .addEventListener('submit', signUpForm)
+document.querySelector('.signup-form')
+document.addEventListener('submit', signUpForm)

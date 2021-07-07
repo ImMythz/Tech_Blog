@@ -15,7 +15,7 @@ router.get('/', withAuth, async (req, res) => {
 
         res.render('user-posts', { layout: 'dashboard', posts });
     } catch (err) {
-        res.redirect('login')
+        res.redirect('/')
     }
 })
 

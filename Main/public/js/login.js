@@ -3,15 +3,15 @@ const loginForm = async function(event){
     event.preventDefault()
 
     // Assigns user values from input fields
-    const usernameVal = $("#email-input")
-    const passwordVal = $("#password-input")
+    const usernameData = document.querySelector("#email-input")
+    const passwordData = document.querySelector("#password-input")
 
     // Checks user login values
-    const response = await fetch('./api/user/login', {
+    const response = await fetch('/api/user/login', {
         method: 'POST',
         body: JSON.stringify({
-            username = usernameVal.value,
-            password = passwordVal.value
+            username: usernameData.value,
+            password: passwordData.value,
         }),
         headers: { 'Content-Type': 'application/json' },
     })
@@ -23,6 +23,5 @@ const loginForm = async function(event){
     }
 }
 
-documnet
-    .querySelector('.login-form')
-    .addEventListener('submit', loginForm)
+document.querySelector('.login-form');
+document.addEventListener('submit', loginForm)
