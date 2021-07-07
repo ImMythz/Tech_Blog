@@ -23,9 +23,12 @@
 
 {{!-- Renders a form to allow the user to post a comment --}}
 <form>
-  <div class="mb-3">
+  <div class="mb-3 comment-form">
+    <input type="hidden" id="post-id" value="{{post.id}}"/>
     <label for="exampleInputEmail1" class="form-label">Comment</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="email" class="form-control" id="comment-body" aria-describedby="emailHelp"/>
   </div>
   <button type="submit" class="btn btn-primary">Post Comment</button>
 </form>
+
+<script src="/Main/public/js/comment.js"></script>
