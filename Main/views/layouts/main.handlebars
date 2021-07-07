@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="/">Home</a>
-              {{#if logged_in}}
+              {{#if loggedIn}}
               <a class="nav-link" href="/dashboard">Dashboard</a> |
               <a class="nav-link" href="/logout" id="logout">Logout</a>
               {{else}}
@@ -41,7 +41,7 @@
       
     </footer>
   </div>
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
   <!-- Bootstrap Bundle w/ Popper -->
