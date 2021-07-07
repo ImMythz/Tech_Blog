@@ -1,0 +1,9 @@
+{{!-- Renders all the user posts --}}
+{{#each posts}}
+<div class="card">
+  <h5 href="/dashboard/edit/{{id}}" class="card-header">{{title}} | {{format_date createdAt}}</h5>
+  <div class="card-body">
+    <p class="card-text">{{body}}</p>
+  </div>
+</div>
+{{/each}}
