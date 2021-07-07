@@ -1,9 +1,12 @@
+// Handles logic for when user wants to login
 const loginForm = async function(event){
     event.preventDefault()
 
+    // Assigns user values from input fields
     const usernameVal = $("#email-input")
     const passwordVal = $("#password-input")
 
+    // Checks user login values
     const response = await fetch('./api/user/login', {
         method: 'POST',
         body: JSON.stringify({
