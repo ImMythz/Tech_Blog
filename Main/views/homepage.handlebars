@@ -1,7 +1,9 @@
-<form>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Post</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+{{!-- Renders each post as its own card --}}
+{{#each Post as |post|}}
+<div class="card">
+  <h5 class="card-header">{{post.title}} | {{post.User.username}}</h5>
+  <div class="card-body">
+    <p class="card-text">{{post.body}}</p>
+  </div>
+</div>
+{{/each}}
