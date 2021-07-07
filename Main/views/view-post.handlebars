@@ -1,0 +1,31 @@
+{{!-- Renders the selected post --}}
+<div class="card">
+  <h5 class="card-header">{{post.title}} |  {{post.User.username}} | {{format_date createdAt}}</h5>
+  <div class="card-body">
+    <p class="card-text">{{post.body}}</p>
+  </div>
+</div>
+
+{{!-- Renders the comment section if the post has comments --}}
+{{#if post.Comments}}
+<div class="card">
+  <h5 class="card-header">Comments</h5>
+  <div class="card-body">
+    {{#each post.Comments}}
+        <div>
+            <p class="card-text">{{body}}</p>
+            <p class="card-text">- {{User.username}} | {{format_date createdAt}}</p>
+        </div>
+    {{/each}}
+  </div>
+</div>
+{{/if}}
+
+{{!-- Renders a form to allow the user to post a comment --}}
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Comment</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <button type="submit" class="btn btn-primary">Post Comment</button>
+</form>
