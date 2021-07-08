@@ -19,7 +19,6 @@ router.post('/', async (req, res) => {
             res.json(newUser)
         })
     }   catch (err) {
-        alert('Baba Booey')
         res.status(500).json(err)
     }
 })
@@ -61,7 +60,7 @@ router.post('/login', async (req,res) =>{
 })
 
 // Handles logging out the user
-router.post('/', async (req, res) => {
+router.post('/logout', async (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end()

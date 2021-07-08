@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 
         const posts = postData.map((post) => post.get({ plain: true }))
 
-        res.render('homepage', { posts });
+        res.render('homepage', { posts , loggedIn: req.session.loggedIn });
     } catch (err) {
         res.status(500).json(err)
     }
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 // Render signUp page if not loggedIn
 router.get('/signUp', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/')
+        res.redirect('/dashboard')
         return;
 
     }   else {

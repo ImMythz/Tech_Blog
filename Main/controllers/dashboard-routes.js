@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
 
         const posts = postData.map((post) => post.get({ plain: true }))
 
-        res.render('user-posts', { layout: 'dashboard', posts });
+        res.render('user-posts', { layout: 'dashboard', posts , loggedIn: true });
     } catch (err) {
         res.redirect('/')
     }

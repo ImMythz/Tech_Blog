@@ -17,9 +17,10 @@ const signUpForm = async function(event) {
             password: passwordData.value
         }),
         headers: { 'Content-Type': 'application/json' },
-    })
-
+    });
+    
     if (response.ok) {
+        console.log('response went through')
         document.location.replace('/dashboard')
     } else {
         alert('Try again')
