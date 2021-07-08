@@ -19,6 +19,7 @@ router.post('/', async (req, res) => {
             res.json(newUser)
         })
     }   catch (err) {
+        alert('Baba Booey')
         res.status(500).json(err)
     }
 })

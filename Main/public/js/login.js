@@ -5,6 +5,8 @@ const loginForm = async function(event){
     // Assigns user values from input fields
     const usernameData = document.querySelector("#email-input")
     const passwordData = document.querySelector("#password-input")
+    console.log(usernameData.value)
+    console.log(passwordData.value)
 
     // Checks user login values
     const response = await fetch('/api/user/login', {

@@ -1,5 +1,5 @@
 // Handles logic for when user wants to signup
-const signUpForm = async function(event){
+const signUpForm = async function(event) {
     event.preventDefault()
     
     // Assigns user values from input fields
