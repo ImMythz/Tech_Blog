@@ -21,7 +21,7 @@ router.get('/', withAuth, async (req, res) => {
 
 // Allows user to create new post
 router.get('/new-post', withAuth, async (req,res) => {
-    res.render('new-post', { layout: 'dashboard' })
+    res.render('new-post', { layout: 'dashboard', loggedIn: true })
 })
 
 // Allows user to edit post
@@ -31,7 +31,7 @@ router.get('/', withAuth, async (req, res) => {
 
         if (postData) {
             const post = postData.get({ plain: true })
-            res.render('edit-post', { layout: 'dashboard', post });
+            res.render('edit-post', { layout: 'dashboard', post, loggedIn: true });
         } else {
             res.status(404).end()
         }
