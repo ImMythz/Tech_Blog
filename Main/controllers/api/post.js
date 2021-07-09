@@ -2,6 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Post } = require('../../models');
 
+// Allows user to create a post
 router.post('/', withAuth, async (req, res) => {
     const body = req.body
 

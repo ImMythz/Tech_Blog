@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+// Sets routes to api calls
 const userRoutes = require('./user');
 const postRoutes = require('./post');
 const commentRoutes = require('./comment-route');

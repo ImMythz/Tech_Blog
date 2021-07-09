@@ -1,6 +1,5 @@
 const postId = document.querySelector('#post-id').value
 const btnDelete = document.querySelector('#btnDelete');
-console.log(postId)
 
 // Handles logic for when user creates a new post
 const editForm = async function(event){
@@ -9,8 +8,6 @@ const editForm = async function(event){
     // Assigns user values from input fields
     const postTitleData = document.querySelector("#post-title")
     const postBodyData = document.querySelector("#post-body")
-    console.log(postTitleData)
-    console.log(postBodyData)
 
     // Sends data
     await fetch(`/api/post/${postId}`, {
