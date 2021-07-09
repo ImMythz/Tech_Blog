@@ -14,7 +14,7 @@
     {{#each post.Comments}}
         <div>
             <p class="card-text">{{body}}</p>
-            <p class="card-text">- {{User.username}} | {{format_date createdAt}}</p>
+            <p class="card-text">- {{User.username}} | {{post.format_date createdAt}}</p>
         </div>
     {{/each}}
   </div>
@@ -22,13 +22,11 @@
 {{/if}}
 
 {{!-- Renders a form to allow the user to post a comment --}}
-<div class="card">
+<div class="card mt-5">
   <form class="comment-form">
-    <div class="card-header mb-3">
-      <input type="hidden" id="post-id" value="{{post.id}}"/>
-      <h5 class="form-label fs-6 mt-2">Comment</h5>
-    </div>
     <div class="card-body">
+      <input type="hidden" id="post-id" value="{{post.id}}"/>
+      <h5 class="form-label fs-6 mb-3">Comment</h5>
       <input type="text" class="form-control" id="comment-body" aria-describedby="emailHelp"/>
     </div>
     <button type="submit" class="ms-3 mb-3 btn btn-primary">Post Comment</button>
