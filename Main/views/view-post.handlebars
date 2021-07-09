@@ -8,16 +8,16 @@
 
 {{!-- Renders the comment section if the post has comments --}}
 {{#if post.Comments}}
-<div class="card">
+<div class="card mt-2">
   <h5 class="card-header">Comments</h5>
+  {{#each post.Comments}}
   <div class="card-body">
-    {{#each post.Comments}}
-        <div>
-            <p class="card-text">{{body}}</p>
-            <p class="card-text">- {{User.username}} | {{post.format_date createdAt}}</p>
-        </div>
-    {{/each}}
+    <div>
+        <p class="card-text">{{body}}</p>
+        <p class="card-text">- {{User.username}} | {{format_date createdAt}}</p>
+    </div>
   </div>
+  {{/each}}
 </div>
 {{/if}}
 

@@ -8,7 +8,7 @@ const commnetForm = async function(event){
     console.log(body)
 
     if (body){
-        await fetch('/api/comment-route', {
+        await fetch('/api/comment', {
             method: 'POST',
             body: JSON.stringify({
                 postId,
@@ -17,7 +17,7 @@ const commnetForm = async function(event){
             headers: { 'Content-Type': 'application/json' },
         })
 
-        // document.location.reload()
+        document.location.reload()
     }
 }
 

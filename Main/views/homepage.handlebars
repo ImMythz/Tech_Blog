@@ -1,6 +1,6 @@
 {{!-- Renders each post as its own card --}}
 {{#each posts}}
-<div class="card">
+<div class="card mt-5">
   <a href="/post/{{id}}"class="fw-bold card-header">{{title}} |  {{User.username}} | {{format_date createdAt}}</a>
   <div class="card-body">
     <p class="card-text">{{body}}</p>
