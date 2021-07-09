@@ -29,7 +29,7 @@ router.post('/login', async (req,res) =>{
         //  Checks to see if this user exists
         const user = await User.findOne({
             where: {
-                username: req.session.username
+                username: req.body.username
             }
         })
 

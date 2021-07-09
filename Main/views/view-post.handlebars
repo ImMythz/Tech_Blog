@@ -1,6 +1,6 @@
 {{!-- Renders the selected post --}}
 <div class="card">
-  <h5 class="card-header">{{post.title}} |  {{post.User.username}} | {{format_date post.createdAt}}</h5>
+  <h5 class="card-header fs-5">{{post.title}} |  {{post.User.username}} | {{format_date post.createdAt}}</h5>
   <div class="card-body">
     <p class="card-text">{{post.body}}</p>
   </div>
@@ -14,7 +14,7 @@
   <div class="card-body">
     <div>
         <p class="card-text">{{body}}</p>
-        <p class="card-text">- {{User.username}} | {{format_date createdAt}}</p>
+        <p class="card-text fw-light">- {{User.username}} | {{format_date createdAt}}</p>
     </div>
   </div>
   {{/each}}
