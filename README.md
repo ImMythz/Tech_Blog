@@ -44,6 +44,8 @@ As a developer, I want to create a CMS-style blog site that allows users to crea
 <img src='assets\images\TB-screenshot-1.png' alt='Tech Blog Sceenhot One'>
 <img src='assets\images\TB-screenshot-2.png' alt='Tech Blog Tracker Sceenhot Two'>
 
+<a href="https://young-woodland-81817.herokuapp.com/">Checkout the deployed application here</a>
+
 ## License
 MIT License
 
