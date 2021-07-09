@@ -41,8 +41,8 @@ Listed below are all of the technologies used in this repo:
 
 ## Usage
 As a developer, I want to create a CMS-style blog site that allows users to create posts to share ideas and comment on others. Below are a few screenshots of this application.
-<img src='Assets\images\TB-screenshot-1.png' alt='Tech Blog Sceenhot One'>
-<img src='Assets\images\TB-screenshot-2.png' alt='Tech Blog Tracker Sceenhot Two'>
+<img src='assets\images\TB-screenshot-1.png' alt='Tech Blog Sceenhot One'>
+<img src='assets\images\TB-screenshot-2.png' alt='Tech Blog Tracker Sceenhot Two'>
 
 ## License
 MIT License
