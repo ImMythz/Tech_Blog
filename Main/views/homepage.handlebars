@@ -1,9 +1,9 @@
 {{!-- Renders each post as its own card --}}
 {{#each posts}}
 <div class="card">
-  <h5 href="/post/{{id}}"class="card-header">{{title}} |  {{post.user.username}} | {{format_date createdAt}}</h5>
+  <a href="/post/{{id}}"class="fw-bold card-header">{{title}} |  {{User.username}} | {{format_date createdAt}}</a>
   <div class="card-body">
-    <p class="card-text">{{post.body}}</p>
+    <p class="card-text">{{body}}</p>
   </div>
 </div>
 {{/each}}

@@ -1,8 +1,8 @@
 const commnetForm = async function(event){
     event.preventDefault()
 
-    const postId = $("#post-id").value
-    const body = $("#comment-body").value
+    const postId = document.querySelector('#post-id').value
+    const body = document.querySelector('#comment-body').value
 
     if (body){
         await fetch('./api/comment-route', {
@@ -18,6 +18,6 @@ const commnetForm = async function(event){
     }
 }
 
-documnet
-    .querySelector('.comment-form')
-    .addEventListener('submit', commnetForm)
+
+document.querySelector('.comment-form')
+document.addEventListener('submit', commnetForm)

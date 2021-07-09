@@ -1,6 +1,6 @@
 {{!-- Renders the selected post --}}
 <div class="card">
-  <h5 class="card-header">{{post.title}} |  {{post.User.username}} | {{format_date createdAt}}</h5>
+  <h5 class="card-header">{{post.title}} |  {{post.User.username}} | {{format_date post.createdAt}}</h5>
   <div class="card-body">
     <p class="card-text">{{post.body}}</p>
   </div>
@@ -22,13 +22,17 @@
 {{/if}}
 
 {{!-- Renders a form to allow the user to post a comment --}}
-<form>
-  <div class="mb-3 comment-form">
-    <input type="hidden" id="post-id" value="{{post.id}}"/>
-    <label for="exampleInputEmail1" class="form-label">Comment</label>
-    <input type="email" class="form-control" id="comment-body" aria-describedby="emailHelp"/>
-  </div>
-  <button type="submit" class="btn btn-primary">Post Comment</button>
-</form>
+<div class="card">
+  <form class="comment-form">
+    <div class="card-header mb-3">
+      <input type="hidden" id="post-id" value="{{post.id}}"/>
+      <h5 class="form-label fs-6 mt-2">Comment</h5>
+    </div>
+    <div class="card-body">
+      <input type="text" class="form-control" id="comment-body" aria-describedby="emailHelp"/>
+    </div>
+    <button type="submit" class="ms-3 mb-3 btn btn-primary">Post Comment</button>
+  </form>
+</div>
 
-<script src="/Main/public/js/comment.js"></script>
+<script src="/js/commnet.js"></script>
